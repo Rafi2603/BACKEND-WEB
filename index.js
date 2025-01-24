@@ -15,11 +15,11 @@ const upload = multer({ storage: multer.memoryStorage() });
 // Middleware (session)
 
 app.use(cors({
-    origin: '*', // Izinkan semua origin
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Izinkan metode HTTP yang diinginkan
-    allowedHeaders: ['Content-Type', 'Authorization'], // Izinkan header yang diinginkan
-    optionsSuccessStatus: 200
+    origin: 'https://p2-k3-dashboard-web.vercel.app', // Hanya izinkan origin frontend Anda
+    methods: 'GET,POST,PUT,DELETE', // Metode HTTP yang diizinkan
+    credentials: true // Jika Anda menggunakan cookie atau header otentikasi
 }));
+
 
 
 app.use(
